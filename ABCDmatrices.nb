@@ -10,43 +10,62 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      4152,        135]
-NotebookOptionsPosition[      3836,        120]
-NotebookOutlinePosition[      4178,        135]
-CellTagsIndexPosition[      4135,        132]
+NotebookDataLength[      6847,        207]
+NotebookOptionsPosition[      5978,        178]
+NotebookOutlinePosition[      6690,        201]
+CellTagsIndexPosition[      6647,        198]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell["ABCD matrix calculator", "Section",
+ CellChangeTimes->{{3.642840081643319*^9, 3.6428400900578003`*^9}}],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.627238613158846*^9, 3.627238626961635*^9}}],
 
+Cell["Define ABCD matrices for different optical components", "Text",
+ CellChangeTimes->{{3.642840096674179*^9, 3.6428400976102324`*^9}, {
+  3.6428401440658894`*^9, 3.642840166889195*^9}}],
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{
-   RowBox[{"constantrefr", "[", 
-    RowBox[{"d_", ",", "refr_"}], "]"}], ":=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"1", ",", 
-       RowBox[{"d", "/", "refr"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"constantrefr", "[", 
+     RowBox[{"d_", ",", "refr_"}], "]"}], ":=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", 
+        RowBox[{"d", "/", "refr"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "path", " ", "through", " ", "a", " ", "homogeneous", " ", "medium", " ", 
+    "of", " ", "length", " ", "d"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"refractionatflat", "[", 
-    RowBox[{"refrbefore_", ",", "refrafter_"}], "]"}], ":=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"1", ",", "0"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"0", ",", 
-       RowBox[{"refrbefore", "/", "refrafter"}]}], "}"}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"refractionatflat", "[", 
+     RowBox[{"refrbefore_", ",", "refrafter_"}], "]"}], ":=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"refrbefore", "/", "refrafter"}]}], "}"}]}], "}"}]}], ";"}], 
+  " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "passing", " ", "across", " ", "a", " ", "flat", " ", "interface", " ", 
+    "between", " ", "two", " ", "media"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"refractionatcurved", "[", 
@@ -62,9 +81,11 @@ Cell[BoxData[{
          RowBox[{"refrbefore", "-", "refrafter"}], ")"}], "/", 
         RowBox[{"(", 
          RowBox[{"radius", "*", "refrafter"}], ")"}]}], ",", 
-       RowBox[{"refrbefore", "/", "refrafter"}]}], "}"}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
+       RowBox[{"refrbefore", "/", "refrafter"}]}], "}"}]}], "}"}]}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "passing", " ", "across", " ", "a", " ", "curved", " ", "interface", " ", 
+    "between", " ", "two", " ", "media"}], "*)"}], "\[IndentingNewLine]", 
   RowBox[{"flatmirrorrefl", ":=", 
    RowBox[{"{", 
     RowBox[{
@@ -74,16 +95,22 @@ Cell[BoxData[{
       RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"curvedmirrorrefl", "[", "radius_", "]"}], ":=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"1", ",", "0"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
+   RowBox[{
+    RowBox[{"curvedmirrorrefl", "[", "radius_", "]"}], ":=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
        RowBox[{
-        RowBox[{"-", "2"}], "/", "radius"}], ",", "1"}], "}"}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"-", "2"}], "/", "radius"}], ",", "1"}], "}"}]}], "}"}]}], 
+   ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "reflection", " ", "off", " ", "of", " ", "a", " ", "mirror", " ", "with", 
+    " ", "a", " ", "given", " ", "curvature", " ", "radius"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"thinlens", "[", "focallength_", "]"}], ":=", 
@@ -95,12 +122,27 @@ Cell[BoxData[{
       RowBox[{
        RowBox[{
         RowBox[{"-", "1"}], "/", "focallength"}], ",", "1"}], "}"}]}], 
-    "}"}]}], ";"}], "\[IndentingNewLine]"}], "Input",
+    "}"}]}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "thin", " ", "lens", " ", "of", " ", "a", " ", "given", " ", "focal", " ", 
+    "length"}], "*)"}], "\[IndentingNewLine]"}]}], "Input",
  CellChangeTimes->{{3.6272388615743914`*^9, 3.627238878426421*^9}, {
   3.6272389271860867`*^9, 3.6272389682524242`*^9}, {3.627239007868554*^9, 
   3.62723924382099*^9}, {3.62723932186275*^9, 3.627239353199606*^9}, {
   3.6272394465029745`*^9, 3.627239484391842*^9}, {3.6272409149969826`*^9, 
-  3.6272409237349977`*^9}}],
+  3.6272409237349977`*^9}, {3.642840187035347*^9, 3.6428402806177*^9}}],
+
+Cell[TextData[{
+ "Compose a matrix for an optical system from component ABCD matrices; the \
+input is a ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " list\nThe last martix in the product should be the first one that the beam \
+sees"
+}], "Text",
+ CellChangeTimes->{{3.6428405207114325`*^9, 3.6428405803348427`*^9}, {
+  3.6428406963254766`*^9, 3.6428407167736464`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -116,12 +158,36 @@ Cell[BoxData[{
       RowBox[{"N", ",", "system"}], "]"}]}], "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.6272397857508717`*^9, 3.6272398753472304`*^9}, {
   3.6272399641905265`*^9, 3.627239970198537*^9}, {3.6272400643431425`*^9, 
-  3.627240092320178*^9}, {3.6272401412860317`*^9, 3.6272401481288443`*^9}}]
+  3.627240092320178*^9}, {3.6272401412860317`*^9, 3.6272401481288443`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"flendependence", "[", 
+    RowBox[{"f1_", ",", "f2_"}], "]"}], ":=", 
+   RowBox[{"systemmatrix", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"thinlens", "[", "f2", "]"}], ",", 
+      RowBox[{"constantrefr", "[", 
+       RowBox[{".1", ",", "1"}], "]"}], ",", 
+      RowBox[{"thinlens", "[", "f1", "]"}]}], "}"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6428407583480244`*^9, 3.642840835613444*^9}, {
+  3.6428408767057943`*^9, 3.6428409003501463`*^9}}]
+}, Open  ]]
 },
-WindowSize->{707, 817},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
-StyleDefinitions->"Default.nb"
+WindowSize->{707, 754},
+WindowMargins->{{339, Automatic}, {69, Automatic}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Text"], FontColor -> RGBColor[0.5, 0, 0.5]]}, 
+  WindowSize -> {783, 878}, WindowMargins -> {{0, Automatic}, {Automatic, 0}},
+   Visible -> False, FrontEndVersion -> 
+  "10.0 for Microsoft Windows (64-bit) (December 4, 2014)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
 ]
 (* End of Notebook Content *)
 
@@ -134,9 +200,15 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 157, 3, 31, "Input"],
-Cell[717, 25, 2490, 77, 212, "Input"],
-Cell[3210, 104, 622, 14, 52, "Input"]
+Cell[CellGroupData[{
+Cell[579, 22, 109, 1, 70, "Section"],
+Cell[691, 25, 157, 3, 31, "Input"],
+Cell[851, 30, 188, 2, 30, "Text"],
+Cell[1042, 34, 3400, 99, 312, "Input"],
+Cell[4445, 135, 376, 9, 68, "Text"],
+Cell[4824, 146, 622, 14, 52, "Input"],
+Cell[5449, 162, 513, 13, 52, "Input"]
+}, Open  ]]
 }
 ]
 *)
