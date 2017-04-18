@@ -1,0 +1,240 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8801,        231]
+NotebookOptionsPosition[      8262,        208]
+NotebookOutlinePosition[      8608,        223]
+CellTagsIndexPosition[      8565,        220]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "Figure out what power is clipped off when a 2D Gaussian beam of a given ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "/", 
+    SuperscriptBox["e", "2"]}], TraditionalForm]]],
+ " diameter passes through an aperture of a given size "
+}], "Text",
+ CellChangeTimes->{{3.67749280798499*^9, 3.6774928100253487`*^9}, {
+  3.6774937289372406`*^9, 3.677493770969224*^9}, {3.6774963211865406`*^9, 
+  3.677496357186508*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.677492799162116*^9, 3.6774928041784563`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"gaussianbeam", "[", 
+    RowBox[{
+    "x_", ",", "y_", ",", "waistradX_", ",", "waistradY_", ",", 
+     "totalpower_"}], "]"}], ":=", 
+   RowBox[{"2", "*", 
+    FractionBox["totalpower", 
+     RowBox[{"Pi", "*", "waistradX", "*", "waistradY"}]], "*", 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "2"}], "*", 
+      FractionBox[
+       SuperscriptBox["x", "2"], 
+       SuperscriptBox["waistradX", "2"]]}], "]"}], "*", 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "2"}], "*", 
+      FractionBox[
+       SuperscriptBox["y", "2"], 
+       SuperscriptBox["waistradY", "2"]]}], "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6774942028636904`*^9, 3.6774943602304597`*^9}, 
+   3.6774946308456244`*^9, {3.677494730811178*^9, 3.677494730930257*^9}, {
+   3.6774963316284924`*^9, 3.6774963735173807`*^9}, {3.6774968506727576`*^9, 
+   3.6774969146963825`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"gaussianbeam", "[", 
+     RowBox[{"x", ",", "y", ",", "17", ",", "17", ",", "20"}], "]"}], "*", 
+    RowBox[{"Boole", "[", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["y", "2"]}], "\[LessEqual]", 
+      SuperscriptBox["50", "2"]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "70"}], ",", "70"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "70"}], ",", "70"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6774943512995143`*^9, 3.6774943933264933`*^9}, {
+  3.67749443877275*^9, 3.6774944428604727`*^9}, {3.6774945721235294`*^9, 
+  3.6774945742599525`*^9}, {3.677494640002721*^9, 3.6774946421231327`*^9}, {
+  3.6774947235623517`*^9, 3.67749480178543*^9}, {3.6774950189271855`*^9, 
+  3.6774951031522603`*^9}, {3.677497275980011*^9, 3.6774972784779215`*^9}, {
+  3.6774973751729717`*^9, 3.6774975168031054`*^9}, {3.6774975543466725`*^9, 
+  3.6774975544014835`*^9}}],
+
+Cell[BoxData["19.999999176758898`"], "Output",
+ CellChangeTimes->{{3.677497461265175*^9, 3.67749751719712*^9}, 
+   3.677497556380519*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"gaussianbeam", "[", 
+        RowBox[{"x", ",", "y", ",", "beamRad", ",", "beamRad", ",", "20"}], 
+        "]"}], "*", 
+       RowBox[{"Boole", "[", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["x", "2"], "+", 
+          SuperscriptBox["y", "2"]}], "\[LessEqual]", 
+         SuperscriptBox["19", "2"]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"-", "70"}], ",", "70"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"-", "70"}], ",", "70"}], "}"}]}], "]"}], "/", "20"}], 
+   RowBox[{"(*", 
+    RowBox[{"this", " ", "is", " ", "the", " ", "total", " ", "power"}], 
+    "*)"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"beamRad", ",", "12", ",", "19"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<Beam radius [mm]\>\"", ",", "\"\<Fraction power transmission\>\""}],
+      "}"}]}], ",", 
+   RowBox[{"PlotLabel", "\[Rule]", "\"\<Aperture 19 mm rad\>\""}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6774943512995143`*^9, 3.6774943933264933`*^9}, {
+  3.67749443877275*^9, 3.6774944428604727`*^9}, {3.6774945721235294`*^9, 
+  3.6774945742599525`*^9}, {3.677494640002721*^9, 3.6774946421231327`*^9}, {
+  3.6774947235623517`*^9, 3.67749480178543*^9}, {3.6774950189271855`*^9, 
+  3.6774951031522603`*^9}, {3.677497275980011*^9, 3.6774972784779215`*^9}, {
+  3.6774973751729717`*^9, 3.677497444650558*^9}, {3.6774975332757235`*^9, 
+  3.677497604395142*^9}, {3.6774976475233145`*^9, 3.6774976475701675`*^9}, {
+  3.677497678155054*^9, 3.6774977387529726`*^9}, {3.67749777505669*^9, 
+  3.677497810680512*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+    1.], LineBox[CompressedData["
+1:eJwV0mtQEwcQB/AIWgERBbRYH4i8DJCEy2mrorirVRCjiFgGfGAApUoAaSkM
+ldraIlRLeRUhKlZliLYKARETixpomQDhrSJSA4IOwiBe7q5Ckaex1w87O7/5
+z/4/7YqIuMBIEx6Pt5Ob/7fIsXkmj8fHPFlfZE4jC9Vha2QfzeDjtuKC8CTO
+O68oHpAmfPRWbg06yDlm6YmCyJl8tJDEOQs4l3woJJrN+Cjw/ydc18ACf072
+frk1H5cvuxYyrWPB8d/ACoETH7vOOq8Iq2fBrr5LuteHj7EZVVorLQuWplF5
+l3L5uL3wgiD6PgvqQ8PDj/V81Oy7s/PObRY8542rry53Q8vwfvXFEhZUe04E
+hkW7YUvhUIuoiAX6/tQiqwo3pJ8HeOnOsyCumqj8zeiGmmU3Ol5lsuBjnlCl
+93PHtblBd9NTWJh3fIgyZrujQ9i2o/5JLPT/0DNi9cwdg+U6bYyMhdiyFhdr
+Jw/sL+1u1YSyoHNZqyk96oGWWp1GGcCC4BNHwccqDxw095G0bGJhq2x2fdmk
+By6+0LZk0yoWotZEr7P1FSA5ohbXOrIg3SWxtskVoIF4skdvzYLZz662pk8F
+ONw+3hQ9g4Uq6fdMr5MQLZsKvhhgGHANeTKilAlxdV/P4eFnDBQMXW+P/EOI
++byDMxsbGHheN77wrokIL11ttvBVMfC07tNTxm0iDLzOilILGeg5OLdJlC/C
+MxOSqah0BuRL2r12PxOhg2ZdjWsiAw5OtvOtHD3xjFSZcU/KgFrbXq2O9cT8
+sYeHu3wZMJ7OPLdL5Yld4nf6aYKBG/EvnWU8Ak/rMyfy7BjQ+Gwsn3AhsGGs
+5OUsIw03lPIAEz8Cff/KlV4boGGptCyUF0fgWHlZqqKJhiiF9mRSLoG8dbqG
+wXIa7OfadaxXE1hn//j1qnM07NW65Y92EegsmfylOZmGY3O8ovlGAmMnM/98
+JKXBvNC8LMBZjMLVm9cv2EzDd/Wds4Z9xbi4Nyqx24WG/TZ92S9kYsw8PNih
+M6ehulj5Y22OGDf0Z6r6XhtgqiMhd4VKzP1LvNfvrQaolkxbJHSJ8Yj/HYfs
+UgMMDdaobXkkFoUOplzLNACzMC1R4ETizaILkWfiDHA8Z3aRlx+JtRvS0tL8
+DdD76+mXNTEkyvJepIZ7GqCkbWuwPJvE2aZBjTnzDWDcoV0TpiZx2bEQ7WOG
+Ao/QjULFUxJ58qZ7Ng8oiG89WYh6EhMS34amtlFQ6V1j28tZ/RkxPdpKgY/9
+lslF3SQmjba76VsoiHjup8vqIXHRm1G/K00UFIQHhSf3kRh5a+Cyez0FFp/H
+5O82kLivk6/wrqJgd2epGcv527VfFpdpKDjvw36TQXN9WYxyOWfXlfEROoa7
+ZzMUM+5TsPlVkqf3GxK//io5uK6SgmTZqUb+WxKbKld2S1QU1HTVbqjnfK40
+QK65TYGZ5IPyQ2Mkpo3U7BBylnv8JL88TuIR35QSqwoKKgxZhxZMkZjTfZF4
+dJOCiQMPO29xdnd1q9/EGVutt++aJnFLlFlwRRkFbaV5RPo7El8X18jOllKw
+0L5TsdLI9dlcpk05H8iys6vj7LLlUXSCkoIiY0h6xHsuTzgw0F9CwdCxgnfv
+OQf/jfuCOP8HPpleWA==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"Beam radius [mm]\"", TraditionalForm], 
+    FormBox["\"Fraction power transmission\"", TraditionalForm]},
+  AxesOrigin->{12., 0.86},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{510., Automatic},
+  Method->{"DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None},
+  PlotLabel->FormBox["\"Aperture 19 mm rad\"", TraditionalForm],
+  PlotRange->{{12, 19}, {0.8646647227057923, 0.9933549871378369}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.6774943895759964`*^9, 3.6774943946863985`*^9}, 
+   3.6774944434068375`*^9, 3.6774945760581493`*^9, {3.6774946340307465`*^9, 
+   3.6774946426004505`*^9}, {3.6774947648718543`*^9, 3.6774948023688183`*^9}, 
+   3.677495054805072*^9, 3.6774951052416506`*^9, {3.677497581595157*^9, 
+   3.677497609263571*^9}, 3.6774977410560627`*^9, {3.677497784870491*^9, 
+   3.6774978130790873`*^9}}]
+}, Open  ]]
+},
+WindowSize->{783, 873},
+WindowMargins->{{560, Automatic}, {Automatic, 54}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 430, 10, 55, "Text"],
+Cell[991, 32, 159, 3, 31, "Input"],
+Cell[1153, 37, 927, 25, 70, "Input"],
+Cell[CellGroupData[{
+Cell[2105, 66, 1047, 24, 55, "Input"],
+Cell[3155, 92, 137, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3329, 99, 1756, 42, 98, "Input"],
+Cell[5088, 143, 3158, 62, 316, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

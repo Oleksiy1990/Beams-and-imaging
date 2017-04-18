@@ -1,0 +1,277 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+                  (* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[         0,          0]
+NotebookOptionsPosition[         0,          0]
+NotebookOutlinePosition[         0,          0]
+CellTagsIndexPosition[         0,          0]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Labeled", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Pi", "*", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"waist", "*", 
+          SuperscriptBox["10", 
+           RowBox[{"-", "3"}]]}], ")"}], "2"], "/", 
+       RowBox[{"(", 
+        RowBox[{"689", "*", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "9"}]]}], ")"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"waist", ",", "0.1", ",", "3"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Waist (mm)\>\"", ",", "\"\<Rayleigh range (m)\>\""}], 
+       "}"}]}]}], "]"}], ",", 
+   "\"\<Rayleigh range for 689 nm Gaussian beam\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.650028313748005*^9, 3.65002842822327*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{GraphicsBox[{{{}, {}, {
+       Directive[
+        Opacity[1.], 
+        RGBColor[0.368417, 0.506779, 0.709798], 
+        AbsoluteThickness[1.6]], 
+       LineBox[CompressedData["
+1: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
+Ak99zm0siyfxH+wfVUM=
+        "]]}}}, {
+    DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
+     AxesLabel -> {
+       FS
+64lNyFaR2zbvTEOJiZW1FVsBbP41ZyxXBJGi1ML1HRDAtQwb05tziKSnc3w8
+QxC5FstW7byj+A8fZjHZIIg7SzuC9Wv+hTVB3vJvaULYw4yR+uW/x7D0xsbv
+UhVCmHLz6+gJpgmmPRLVkdURxm1hrAy1alNcCG2yaCsVxmx/D5c7Lccx28HC
+es9eEcwqKEnN5Zqhnqklk5YnggWMNsrIrDlKGMnMrUttxn4D5sP1NTr6T93O
+8krajAX6bU0nt1sg+86NeyVbCAw0WrsPYIknTlvHJV4jkPPgpFi1EwNf0SXs
+b4URmHJKLKrnHAPRcFA7O4JA7RFhjw/uDFSXcxgtiyFwh8OLVKUABm4euag7
+lEygrJ7XgdQEBlY7RbxVzSYwBK5mx5QzcI/bn9DMItCxyi/ghTCJt2z9JTrZ
+BDIL8yTei5K4la73frCRwL4Lkqri20lc/qnu9gcOgSzH1ixXGRK73r/8KN5J
+4LiK/fA2DRIjvd/cc3lDoLeYcYrfKRK/Oub5eowR+Lt0sUnuWRK9rM6ZBb4l
+0GP5tHuXM4l2Wu/nEqYIHP45TlTTg8RD80v0ss8Eirptz1gIJ/HR22qF2r8J
+/CZ0j7cvlkSlvtDFpnkCub7uMaeTSKRUCuYOLhO43tinz04nMbqgOXD8G4EO
+hd7GC3dJXEmPt/ywSuB9O7JMLYdEn1gL5aXvBNaM+2TYF5A4FUj5urFBYLnR
+wKe0RyT+D1h5T0c=
+        "]]}}}, {
+    DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
+     AxesLabel -> {
+       FormBox["\"Waist (mm)\"", TraditionalForm], 
+       FormBox["\"Rayleigh range (m)\"", TraditionalForm]}, 
+     AxesOrigin -> {0.5, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
+     FrameLabel -> {{None, None}, {None, None}}, 
+     FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
+     GridLines -> {None, None}, GridLinesStyle -> Directive[
+       GrayLevel[0.5, 0.4]], 
+     Method -> {
+      "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+       AbsolutePointSize[6], "ScalingFunctions" -> None}, 
+     PlotRange -> {{0.1, 3}, {0., 61.332609038442925`}}, PlotRangeClipping -> 
+     True, PlotRangePadding -> {{
+        Scaled[0.02], 
+        Scaled[0.02]}, {
+        Scaled[0.05], 
+        Scaled[0.05]}}, Ticks -> {Automatic, Automatic}}],
+   "\"Rayleigh range for 461 nm Gaussian beam\""},
+  "Labeled",
+  DisplayFunction->(GridBox[{{
+      TagBox[
+       ItemBox[
+        PaneBox[
+         TagBox[#, "SkipImageSizeLevel"], Alignment -> {Center, Baseline}, 
+         BaselinePosition -> Baseline], DefaultBaseStyle -> "Labeled"], 
+       "SkipImageSizeLevel"]}, {
+      ItemBox[#2, DefaultBaseStyle -> "LabeledLabel"]}}, 
+    GridBoxAlignment -> {"Columns" -> {{Center}}, "Rows" -> {{Center}}}, 
+    AutoDelete -> False, 
+    GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+    BaselinePosition -> {1, 1}]& ),
+  InterpretationFunction->(RowBox[{"Labeled", "[", 
+     RowBox[{#, ",", #2}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.650028445504303*^9, 3.700227993620358*^9}]
+}, Open  ]]
+},
+WindowSize->{775, 873},
+WindowMargins->{{564, Automatic}, {Automatic, 59}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+}
+]
+*)
+L9UCZfkTzVy4AryKWFpGtHrYk5bt+PjF
+MxCnD73z9GXDuZy0VOVXdeA2/XA27QYbhpWFApM064EVd+VzFZMNnpKOtOKM
+enDnSH0TmGTDd6uhECE3FjQcs9l2+0wDtCdc+jVzCxu8ab3arGON4Dl1daC+
+sQG4Ou1hFMkmaKBM2b0OaYazJ4xkinSbwLZ22KiA1QyfLheXw8kmcJZrdBsU
+5MCOZzHvfG41QfXipeJr1zlgo0+z6KU2w3/ED3Be5L8EvnGp5J3tHNBZsPek
+zbTComnqYyXRFogyj/f72NABsec3jteotcCCy9yXDWonSMd58q3NW2BY06ou
+1LUTDFvo4tFxLRDgP3//jHAXhP8iGDwp0gpKDji9g9kFW//tb8IUfAUDIk8r
+Lwv2gILtyb8OrXFhJHt1v8xQH0SG6vlUyrTBywMiWioiPJjMkRLRO9wGp6if
+rjtq8aBkZkjjsF8buE7Y0x0TeaB/1SHSYLoNDPMr+xJp/WCdfeEnWl879KeZ
+6qaVDkD0RHCQWUknsPZPybtUDEOAfqeo+pNu0Cq8czwqnw+BYzx8UNcNQTmy
+R1qe8+FK4usgGW43vKzOufLPv/gQ8nrmnch0N/jSq1m7qWMQHi7cOKrUA9Ij
+cnGyEWNwvcUgJCW9B5J5hVuO/TYO+bb5s/OhvaAk1tdhpj8BvVeCuTUWPPgc
+n3RBUWUa/Fw629zteHDENlCZbT4NVEuVDtlLPNiy0bAzxGMarBS6u0J+fEn2
+Xk02rpiGjma1fsPWH50e/G3VZAZaqIP8muP9cCc864HrpVmoK9Fbqjk6AE8W
+Y3GE+wHy+fOKtYeHQOaAT0flxy/wZ2PHRA3/NcTOBSUK6SyB1KRxtqQHH8w4
+2k2+VWvQY8I7m+wwDpmW+bXEsgAy+Vk9UQcnQP7p5RXfMhE8kkKmPVWdhF0a
+vmHrSlvxY+hB0d/Wp8C2/WqnfyEkv4eg
+xjf+l8N3YYSunO/9Pz5CXRVD2p4uhfVOz5tXkz+D/lELG9cIWVzV/sPm+vMv
+oMoJ9TEYlUfVvtGCM0V/Qz9favVxhiIeDNtztzlvDixr7aje15SRY7500Sd5
+HhbSLfSvn9mLhrsbR6uSFoC+/6aTa/A+LDn7ebdDzCKsVORpRT9Uw8e1FXom
+XksQF+ATGdb6Mybu9VrkuC9DmMKTttda6rjEfH4zweYraKWvPTVLOIhOOX7z
+j458g2u7XKF0UROLsmXW3PRXoFvLBtUZ2nit1pZ/XnkVlM+HmUZn6qDmeNJF
+AcU1GDZxfJNK0cWxAMW6Fenv0H63bK4nQQ8V1RizOgLrsOo3X6axfBiNJzzr
+Rb+vQ4SwczQ1xQCnWPs8FKY3AL6o7GTKGKF5lOIc/cImVBdSP8QsNEaxkqJw
+64lNyFaR2zbvTEOJiZW1FVsBbP41ZyxXBJGi1ML1HRDAtQwb05tziKSnc3w8
+QxC5FstW7byj+A8fZjHZIIg7SzuC9Wv+hTVB3vJvaULYw4yR+uW/x7D0xsbv
+UhVCmHLz6+gJpgmmPRLVkdURxm1hrAy1alNcCG2yaCsVxmx/D5c7Lccx28HC
+es9eEcwqKEnN5Zqhnqklk5YnggWMNsrIrDlKGMnMrUttxn4D5sP1NTr6T93O
+8krajAX6bU0nt1sg+86NeyVbCAw0WrsPYIknTlvHJV4jkPPgpFi1EwNf0SXs
+b4URmHJKLKrnHAPRcFA7O4JA7RFhjw/uDFSXcxgtiyFwh8OLVKUABm4euag7
+lEygrJ7XgdQEBlY7RbxVzSYwBK5mx5QzcI/bn9DMItCxyi/ghTCJt2z9JTrZ
+BDIL8yTei5K4la73frCRwL4Lkqri20lc/qnu9gcOgSzH1ixXGRK73r/8KN5J
+4LiK/fA2DRIjvd/cc3lDoLeYcYrfKRK/Oub5eowR+Lt0sUnuWRK9rM6ZBb4l
+0GP5tHuXM4l2Wu/nEqYIHP45TlTTg8RD80v0ss8Eirptz1gIJ/HR22qF2r8J
+/CZ0j7cvlkSlvtDFpnkCub7uMaeTSKRUCuYOLhO43tinz04nMbqgOXD8G4EO
+hd7GC3dJXEmPt/ywSuB9O7JMLYdEn1gL5aXvBNaM+2TYF5A4FUj5urFBYLnR
+wKe0RyT+D1h5T0c=
+        "]]}}}, {
+    DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
+     AxesLabel -> {
+       FormBox["\"Waist (mm)\"", TraditionalForm], 
+       FormBox["\"Rayleigh range (m)\"", TraditionalForm]}, 
+     AxesOrigin -> {0.5, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
+     FrameLabel -> {{None, None}, {None, None}}, 
+     FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
+     GridLines -> {None, None}, GridLinesStyle -> Directive[
+       GrayLevel[0.5, 0.4]], 
+     Method -> {
+      "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+       AbsolutePointSize[6], "ScalingFunctions" -> None}, 
+     PlotRange -> {{0.1, 3}, {0., 61.332609038442925`}}, PlotRangeClipping -> 
+     True, PlotRangePadding -> {{
+        Scaled[0.02], 
+        Scaled[0.02]}, {
+        Scaled[0.05], 
+        Scaled[0.05]}}, Ticks -> {Automatic, Automatic}}],
+   "\"Rayleigh range for 461 nm Gaussian beam\""},
+  "Labeled",
+  DisplayFunction->(GridBox[{{
+      TagBox[
+       ItemBox[
+        PaneBox[
+         TagBox[#, "SkipImageSizeLevel"], Alignment -> {Center, Baseline}, 
+         BaselinePosition -> Baseline], DefaultBaseStyle -> "Labeled"], 
+       "SkipImageSizeLevel"]}, {
+      ItemBox[#2, DefaultBaseStyle -> "LabeledLabel"]}}, 
+    GridBoxAlignment -> {"Columns" -> {{Center}}, "Rows" -> {{Center}}}, 
+    AutoDelete -> False, 
+    GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+    BaselinePosition -> {1, 1}]& ),
+  InterpretationFunction->(RowBox[{"Labeled", "[", 
+     RowBox[{#, ",", #2}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.650028445504303*^9}]
+}, Open  ]]
+},
+WindowSize->{775, 873},
+WindowMargins->{{564, Automatic}, {Automatic, 59}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 802, 23, 79, "Input"],
+Cell[1385, 47, 4350, 84, 243, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5772, 136, 807, 23, 79, "Input"],
+Cell[6582, 161, 4322, 84, 276, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
